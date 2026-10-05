@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#212121" />
+    <title>Safari Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand-name">Safari Guide</div>
+        <p class="brand-copy">Your Tanzania tourism assistant.</p>
+
+        <section class="sidebar-section expedition-section">
+          <button id="new-chat" class="secondary-button" type="button"><span>+</span> New Chat</button>
+          <button id="toggle-recent" class="secondary-button" type="button"><span>☰</span> Recent Conversations</button>
+        </section>
+
+        <section id="recent-section" class="sidebar-section recent-section hidden">
+          <div class="section-label">Recent conversations</div>
+          <div id="recent-conversations" class="recent-conversations">
+            <div class="recent-empty">Your saved conversations will appear here.</div>
+          </div>
+        </section>
+
+        <div class="sidebar-footer">Tourism information for Tanzania.</div>
+      </aside>
+
+      <main class="main-content">
+        <header class="topbar">
+          <button id="mobile-menu" class="mobile-menu" type="button" aria-label="Open navigation">☰</button>
+          <div class="model-switcher">Safari Guide <span>⌄</span></div>
+          <div class="topbar-meta"><span class="meta-dot"></span> Private session</div>
+        </header>
+
+        <section class="hero">
+          <h1>How can I help?</h1>
+          <p>Ask me about Tanzania tourism.</p>
+        </section>
+
+        <section id="welcome" class="welcome-panel">
+          <p class="welcome-prompt">Start a conversation about your trip.</p>
+        </section>
+
+        <section id="planner" class="planner-panel hidden">
+          <div class="eyebrow">Personal itinerary builder</div>
+          <h2>Plan your Tanzania journey.</h2>
+          <p>Tell us what kind of trip you want and Safari Guide will shape a practical route.</p>
+          <form id="planner-form" class="planner-form">
+            <label>Trip length <select id="trip-days"><option>3 days</option><option selected>7 days</option><option>10 days</option><option>14 days</option></select></label>
+            <label>Travel style <select id="travel-style"><option>Comfortable</option><option>Budget-conscious</option><option>Luxury</option><option>Family-friendly</option></select></label>
+            <label>Interests <input id="trip-interests" value="Wildlife and culture" placeholder="e.g. wildlife, beaches, culture" /></label>
+            <label>Places to consider <input id="trip-places" placeholder="e.g. Serengeti, Zanzibar" /></label>
+            <div class="planner-actions"><button id="close-planner" class="planner-cancel" type="button">Cancel</button><button class="send-button" type="submit">Build itinerary <span>↗</span></button></div>
+          </form>
+        </section>
+
+        <section id="messages" class="messages" aria-live="polite"></section>
+        <div id="typing" class="typing" hidden><span></span><span></span><span></span> Your guide is thinking</div>
+
+        <form id="chat-form" class="chat-form">
+          <textarea id="message-input" rows="1" placeholder="Message Safari Guide" aria-label="Your message"></textarea>
+          <button class="send-button" type="submit" aria-label="Send message">Send <span>↗</span></button>
+        </form>
+        <div class="input-note">Safari Guide can make mistakes. Check important travel details before booking.</div>
+      </main>
+    </div>
+    <script src="/app.js"></script>
+  </body>
+</html>

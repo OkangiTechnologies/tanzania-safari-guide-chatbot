@@ -1,0 +1,28 @@
+.env
+venv/
+__pycache__/
+*.pyc
+
+# Safe public repository defaults
+# Local secrets
+*.env
+.env
+*.env.*
+!.env.example
+!*.env.example
+*.pem
+*.key
+
+# Local environments and generated files
+.venv/
+venv/
+dl_env/
+__pycache__/
+*.py[cod]
+*.db
+*.sqlite
+*.sqlite3
+.Rhistory
+.Rproj.user/
+.DS_Store
+Thumbs.db
